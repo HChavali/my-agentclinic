@@ -9,3 +9,6 @@ yarn-error.log*
 .pnp.js
 
 .vscode/*
+
+# Claude Code worktrees
+.claude/worktrees/
