@@ -1,4 +1,7 @@
 import type { Child } from 'hono/jsx'
+import { Header } from './Header.js'
+import { Main } from './Main.js'
+import { Footer } from './Footer.js'
 
 export function Layout({ title, children }: { title: string; children?: Child }) {
   return (
@@ -10,17 +13,9 @@ export function Layout({ title, children }: { title: string; children?: Child })
         <link rel="stylesheet" href="/styles.css" />
       </head>
       <body>
-        <header class="site-header">
-          <a class="brand" href="/">AgentClinic</a>
-          <p class="tagline">Relief for agents, from their humans.</p>
-          <nav aria-label="Main">
-            <a href="/">Home</a>
-          </nav>
-        </header>
-        <main>{children}</main>
-        <footer class="site-footer">
-          <p>No agents were over-prompted in the making of this clinic.</p>
-        </footer>
+        <Header />
+        <Main>{children}</Main>
+        <Footer />
       </body>
     </html>
   )

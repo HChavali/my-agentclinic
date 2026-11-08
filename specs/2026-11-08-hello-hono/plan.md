@@ -7,7 +7,7 @@
 
 ## Group 2 — Server
 
-3. `src/components/Layout.tsx`: shared layout with header, nav, main slot, footer.
+3. Layout components in `src/components/`: `Header.tsx` (brand, tagline, nav), `Main.tsx` (content slot) and `Footer.tsx` as three subcomponents, composed by `Layout.tsx`, which also links `/styles.css` in `<head>`.
 4. `src/app.tsx`: Hono app, static serving from `public/`, `GET /` home page.
 5. `src/index.ts`: node-server entry reading `PORT`.
 

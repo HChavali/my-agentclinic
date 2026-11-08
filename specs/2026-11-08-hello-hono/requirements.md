@@ -6,7 +6,7 @@ Roadmap Phase 1. Spec first: this folder is agreed before code changes.
 
 - Add `hono` and `@hono/node-server`; dev dependencies `tsx`, `@types/node`, `vitest`.
 - `npm run dev` starts the server in watch mode (tsx) on port 3000 (override with `PORT`).
-- `GET /` renders a home page using a shared JSX layout (header, nav, main, footer).
+- `GET /` renders a home page using a shared `Layout` composed of three subcomponents: `Header`, `Main`, `Footer`.
 - Static files in `public/` are served at `/` (a basic `styles.css`).
 - Unknown paths return 404.
 
