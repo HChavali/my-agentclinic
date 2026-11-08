@@ -13,8 +13,8 @@
 
 ## Group 3 — Styling and tests
 
-6. `public/styles.css`: custom properties, responsive layout, readable contrast.
-7. `tests/app.test.ts` and `vitest.config.ts`: route tests via `app.request()`.
+6. `public/styles.css`: custom properties, mobile-first responsive layout (small-screen base styles, `min-width` media queries for larger screens), readable contrast.
+7. `tests/app.test.ts` and `vitest.config.ts`: route tests via `app.request()`, including viewport meta and responsive CSS checks.
 
 ## Group 4 — Verify
 

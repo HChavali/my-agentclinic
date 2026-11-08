@@ -2,6 +2,8 @@
 
 Phases are intentionally small — each one is a shippable slice of work, independently reviewable and testable.
 
+**Cross-cutting requirement:** every page and component in every phase follows responsive, mobile-first design (see `mission.md`). Each feature spec must include responsive acceptance criteria.
+
 ---
 
 ## Phase 1 — Hello Hono
@@ -11,7 +13,8 @@ Phases are intentionally small — each one is a shippable slice of work, indepe
 
 ## Phase 2 — Base Layout
 - Server-side JSX layout component (header, nav, main, footer)
-- Basic CSS (custom properties, reset, typography)
+- Basic CSS (custom properties, reset, typography), written mobile-first and responsive
+- Viewport meta tag in the layout
 - All routes render inside the shared layout
 
 ## Phase 3 — Agent List
@@ -44,7 +47,7 @@ Phases are intentionally small — each one is a shippable slice of work, indepe
 - Mary's dashboard is now real
 
 ## Phase 9 — Polish & Accessibility
-- Responsive layout for Steve's modern-browser requirement
+- Responsive audit across all pages on phone, tablet, and desktop widths (responsive design is built in from Phase 2; this phase verifies it)
 - Semantic HTML audit
 - Keyboard navigation and focus styles
 

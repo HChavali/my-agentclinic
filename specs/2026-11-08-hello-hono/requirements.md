@@ -9,6 +9,7 @@ Roadmap Phase 1. Spec first: this folder is agreed before code changes.
 - `GET /` renders a home page using a shared `Layout` composed of three subcomponents: `Header`, `Main`, `Footer`.
 - Static files in `public/` are served at `/` (a basic `styles.css`).
 - Unknown paths return 404.
+- The UI is responsive and mobile-first: usable from ~320px phone widths up to wide desktop screens, with no horizontal scrolling.
 
 ## Out of scope
 
@@ -19,7 +20,8 @@ Database, other pages, client-side JavaScript, visual design pass, custom error 
 - TypeScript `strict: true`; JSX via `hono/jsx` (`jsxImportSource`).
 - ESM (`"type": "module"`, NodeNext resolution).
 - Vitest limited to `tests/**` so stray worktree tests are not picked up.
-- Plain modern CSS; polish is deferred to Phase 8.
+- Plain modern CSS, mobile-first: base styles target small screens and `min-width` media queries enhance for larger ones.
+- Responsive design is a product-wide requirement (see `specs/mission.md`); visual polish is deferred to a later phase.
 
 ## Context
 
@@ -29,5 +31,5 @@ Database, other pages, client-side JavaScript, visual design pass, custom error 
 ## Stakeholder notes
 
 - Mary (engineering): reliable, popular TypeScript stack.
-- Steve (marketing): attractive, modern-browser friendly — basic responsive CSS now, polish later.
+- Steve (marketing): attractive, modern-browser friendly — responsive from the start, polish later.
 - Susan (product): feature pages arrive in later phases.

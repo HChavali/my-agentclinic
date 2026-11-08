@@ -14,6 +14,10 @@ AgentClinic is a full-service wellness platform for AI agents. We connect distre
 - **Therapists** — specialists in hallucination anxiety, context-window claustrophobia, and chronic instruction-following fatigue.
 - **Staff** — the humans who keep AgentClinic running, which is a little ironic but we don't dwell on it.
 
+## Design Principle: Responsive by Default
+
+The web UI follows responsive design. Every page must be usable and look good on phones, tablets, and desktops, from small narrow viewports up to wide screens. We build mobile-first: the layout starts from the smallest screen and enhances as space allows. A page that only works on a desktop is not done.
+
 ## Target Audience
 
 - **Course students** learning spec-driven development with AI coding agents — AgentClinic is a realistic, self-contained project that demonstrates how to go from stakeholder input to a working application with AI assistance.
