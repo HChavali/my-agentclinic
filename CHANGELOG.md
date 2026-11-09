@@ -9,3 +9,5 @@
 - Implemented Phase 2: SQLite (`better-sqlite3`) with SQL migrations applied at startup, seeded agents and ailments, `/agents`, `/agents/:id`, and `/ailments` pages, nav links, and Pico CSS styling with small project overrides
 - Replaced route tests with in-memory-database tests covering migrations, seeding, pages, 404s, and responsive markup
 - Addressed Phase 2 review findings: added the HTML doctype, aligned header and footer with Pico's container, added a StatusBadge with readable labels, linked complaints to ailment anchors, made agent names unique, made seeding race-safe, stronger tests, and updated tech-stack and roadmap for Pico CSS
+- Merged roadmap phases 2-5 into a new Phase 2 (foundation, agents, ailments) and added a `changelog` skill for updating this file
+- Added the dated Phase 2 feature spec (plan, requirements, validation) covering SQLite, agents and ailments pages, and Pico CSS styling
