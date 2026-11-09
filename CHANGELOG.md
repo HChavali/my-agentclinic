@@ -11,3 +11,6 @@
 - Addressed Phase 2 review findings: added the HTML doctype, aligned header and footer with Pico's container, added a StatusBadge with readable labels, linked complaints to ailment anchors, made agent names unique, made seeding race-safe, stronger tests, and updated tech-stack and roadmap for Pico CSS
 - Merged roadmap phases 2-5 into a new Phase 2 (foundation, agents, ailments) and added a `changelog` skill for updating this file
 - Added the dated Phase 2 feature spec (plan, requirements, validation) covering SQLite, agents and ailments pages, and Pico CSS styling
+- Added the dated MVP spec (plan, requirements, validation) covering therapies, appointment booking, the staff dashboard, and Phase 7 essentials
+- Implemented the MVP: therapies catalog with ailment-to-therapy recommendations, seeded therapists, an appointment booking form with server-side validation and confirmation page, and a staff dashboard with counts, tables, and appointment status updates
+- Added custom 404 and 500 pages, request logging, and an end-to-end flow test alongside per-feature tests

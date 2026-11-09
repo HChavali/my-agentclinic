@@ -19,6 +19,13 @@
 .status-available { background: #d1fae5; color: #065f46; }
 .status-in-session { background: #dbeafe; color: #1e40af; }
 .status-needs-rest { background: #fef3c7; color: #92400e; }
+.status-scheduled { background: #dbeafe; color: #1e40af; }
+.status-completed { background: #d1fae5; color: #065f46; }
+.status-cancelled { background: #e5e7eb; color: #374151; }
+
+.count { margin-bottom: 0; font-size: 2.5rem; }
+.row-actions { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 0; }
+.row-actions button { margin: 0; padding: 0.25rem 0.75rem; width: auto; }
 
 /* Larger screens (mobile-first enhancement) */
 @media (min-width: 40rem) {
