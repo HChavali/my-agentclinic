@@ -29,11 +29,12 @@ const links: [string, string[]][] = [
 
 // Inserts sample data only when the tables are empty, so it is safe to run repeatedly.
 export function seed(db: Database.Database): void {
-  const count = (table: string) =>
+  const count = (table: 'agents' | 'ailments') =>
     db.prepare(`SELECT COUNT(*) FROM ${table}`).pluck().get() as number
-  if (count('agents') > 0 || count('ailments') > 0) return
 
+  // The emptiness check runs inside the (immediate) transaction so two processes can't both seed.
   db.transaction(() => {
+    if (count('agents') > 0 || count('ailments') > 0) return
     const addAgent = db.prepare('INSERT INTO agents (name, model_type, status) VALUES (?, ?, ?)')
     const addAilment = db.prepare('INSERT INTO ailments (name, description) VALUES (?, ?)')
     const link = db.prepare(
@@ -43,5 +44,5 @@ export function seed(db: Database.Database): void {
     for (const a of agents) addAgent.run(...a)
     for (const a of ailments) addAilment.run(...a)
     for (const [agent, names] of links) for (const n of names) link.run(agent, n)
-  })()
+  }).immediate()
 }

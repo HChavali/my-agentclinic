@@ -9,5 +9,6 @@ Done and ready to merge when all of these hold:
 5. `GET /agents/:id` → 200 with name, model type, status, and presenting complaints; `/agents/9999` and `/agents/abc` → 404.
 6. `GET /ailments` → 200 HTML listing every seeded ailment with its description.
 7. Every page renders inside the layout (header, nav, main, footer), and nav links to Home, Agents, and Ailments.
-8. Responsive: every page includes `<meta name="viewport" content="width=device-width, initial-scale=1">`; the layout links the Pico CSS stylesheet and `/styles.css` (200, `text/css`) with only overrides in it; content sits in a Pico `container`; at ~320px there is no horizontal scrolling.
+8. Responsive: every page includes `<meta name="viewport" content="width=device-width, initial-scale=1">`; the layout links the Pico CSS stylesheet and `/styles.css` (200, `text/css`) with only overrides in it; content sits in a Pico `container`; at ~320px there is no horizontal scrolling (manual check in a browser; not testable with `app.request`).
 9. `npm run dev` starts the server and `curl localhost:3000/agents` returns the agents page.
+10. Every page starts with `<!DOCTYPE html>` and renders inside the layout, with Pico linked before `/styles.css`.

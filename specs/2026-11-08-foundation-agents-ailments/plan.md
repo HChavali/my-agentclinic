@@ -5,7 +5,7 @@
 1. Install `better-sqlite3` and `@types/better-sqlite3`; add `data/` to `.gitignore`.
 2. `src/db.ts`: `openDb(path)` opens SQLite (`data/agentclinic.db`, or `:memory:`), enables foreign keys, runs migrations and seeds; exports a default connection for the app.
 3. `src/migrate.ts`: tiny runner that applies `migrations/*.sql` in filename order, tracking applied files in a `schema_migrations` table.
-4. `migrations/001_agents.sql`, `002_ailments.sql` (`ailments` + `agent_ailments` join).
+4. `migrations/001_agents.sql`, `002_ailments.sql` (`ailments` + `agent_ailments` join), `003_agents_unique_name.sql` (unique index on `agents.name`).
 
 ## Group 2 — Seed data
 

@@ -13,7 +13,7 @@ Phases are intentionally small — each one is a shippable slice of work, indepe
 
 ## Phase 2 — Foundation: Layout, Agents, Ailments
 - Server-side JSX layout component (header, nav, main, footer); all routes render inside it
-- Basic CSS (custom properties, reset, typography), written mobile-first and responsive
+- Styling with Pico CSS (reset, typography, responsive defaults) plus small project overrides, mobile-first and responsive
 - Viewport meta tag in the layout
 - SQLite database + first migration (`agents` table); seed a handful of fictional agents
 - `/agents` page listing all agents

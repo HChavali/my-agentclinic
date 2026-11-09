@@ -21,9 +21,13 @@ Therapies, appointments, dashboard, create/edit forms, ailment detail page, cust
 ## Decisions
 
 - Kept as one phase (not split into layout/DB sub-phases).
-- Migrations are `migrations/*.sql` files run automatically at startup; no ORM, no separate migrate script.
-- Pico CSS replaces hand-written base CSS; pages stick to semantic HTML so Pico styles them without extra classes. This supersedes plain-CSS-only in `tech-stack.md`; update it when this merges.
-- Status is a fixed set: `available`, `in-session`, `needs-rest`.
+- Migrations are `migrations/*.sql` files run automatically at startup; no ORM, no CLI migrate command.
+- Pico CSS replaces hand-written base CSS; pages stick to semantic HTML so Pico styles them without extra classes. `tech-stack.md` and `roadmap.md` are updated to match.
+- Status is a fixed set: `available`, `in-session`, `needs-rest`, shown to users as "Available", "In session", "Needs rest" via a shared `StatusBadge` component.
+- Agent names are unique (unique index added by migration `003`).
+- Pages emit `<!DOCTYPE html>`; header and footer sit inside Pico's `container`.
+- Complaint links on an agent profile go to `/ailments#ailment-<id>`.
+- Unknown-route 404s use Hono's plain default response, not the layout (custom error pages are out of scope).
 - DB file lives at `data/agentclinic.db` (git-ignored); tests use `:memory:`.
 - `createApp(db)` takes the database so tests can inject an in-memory one.
 - Seeding is idempotent and only runs when tables are empty.
