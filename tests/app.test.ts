@@ -11,7 +11,7 @@ let app: ReturnType<typeof createApp>
 
 beforeEach(() => {
   db = openDb(':memory:')
-  app = createApp(db)
+  app = createApp(db, { log: false })
 })
 
 const get = async (path: string) => {
