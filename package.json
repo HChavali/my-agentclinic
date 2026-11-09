@@ -4,11 +4,25 @@
   "description": "",
   "main": "dist/index.js",
   "scripts": {
-    "build": "tsc"
+    "build": "tsc",
+    "dev": "tsx watch src/index.ts",
+    "start": "tsx src/index.ts",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "validate": "npm run typecheck && npm test"
   },
-  "dependencies": {},
+  "dependencies": {
+    "@hono/node-server": "^2.1.6",
+    "better-sqlite3": "^13.0.3",
+    "hono": "^4.13.17"
+  },
   "devDependencies": {
-    "typescript": "^5.5.3"
+    "@types/better-sqlite3": "^9.6.0",
+    "@types/node": "^26.6.6",
+    "tsx": "^4.23.15",
+    "typescript": "^5.5.3",
+    "vitest": "^5.1.0"
   },
-  "private": true
+  "private": true,
+  "type": "module"
 }

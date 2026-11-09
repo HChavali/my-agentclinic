@@ -1,0 +1,27 @@
+/* Project overrides on top of Pico CSS (loaded first in the layout). */
+:root {
+  --pico-primary: #0f766e;
+  --pico-primary-hover: #0b5a54;
+}
+
+.site-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  border-bottom: 2px solid var(--pico-primary);
+}
+.brand { font-size: 1.5rem; font-weight: 700; text-decoration: none; }
+.tagline { margin: 0; color: var(--pico-muted-color); }
+.site-header nav { display: flex; flex-wrap: wrap; gap: 1rem; }
+.site-footer { color: var(--pico-muted-color); font-size: 0.9rem; }
+
+.status { padding: 0.1rem 0.6rem; border-radius: 1rem; font-size: 0.85rem; }
+.status-available { background: #d1fae5; color: #065f46; }
+.status-in-session { background: #dbeafe; color: #1e40af; }
+.status-needs-rest { background: #fef3c7; color: #92400e; }
+
+/* Larger screens (mobile-first enhancement) */
+@media (min-width: 40rem) {
+  .site-header { flex-direction: row; align-items: baseline; gap: 0.5rem 1.5rem; }
+  .tagline { flex: 1; }
+}
