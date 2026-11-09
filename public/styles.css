@@ -1,55 +1,28 @@
+/* Project overrides on top of Pico CSS (loaded first in the layout). */
 :root {
-  --bg: #f7fbfa;
-  --fg: #1d2b2a;
-  --accent: #0f766e;
-  --muted: #55706d;
-  --max: 60rem;
-}
-
-* { box-sizing: border-box; }
-
-body {
-  margin: 0;
-  min-height: 100vh;
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
-  line-height: 1.6;
-  color: var(--fg);
-  background: var(--bg);
-}
-
-.site-header, main, .site-footer {
-  width: min(100% - 2rem, var(--max));
-  margin-inline: auto;
+  --pico-primary: #0f766e;
+  --pico-primary-hover: #0b5a54;
 }
 
 .site-header {
   display: flex;
-  flex-wrap: wrap;
   flex-direction: column;
-  gap: 0.5rem;
-  padding-block: 1rem;
-  border-bottom: 2px solid var(--accent);
+  gap: 0.25rem;
+  padding: 1rem;
+  border-bottom: 2px solid var(--pico-primary);
 }
+.brand { font-size: 1.5rem; font-weight: 700; text-decoration: none; }
+.tagline { margin: 0; color: var(--pico-muted-color); }
+.site-header nav { display: flex; flex-wrap: wrap; gap: 1rem; }
+.site-footer { padding: 1rem; color: var(--pico-muted-color); font-size: 0.9rem; }
 
-.brand { font-size: 1.5rem; font-weight: 700; color: var(--accent); text-decoration: none; }
-.tagline { margin: 0; color: var(--muted); }
-nav { display: flex; flex-wrap: wrap; gap: 1rem; }
-a { color: var(--accent); }
-
-img, video { max-width: 100%; height: auto; }
-
-main { padding-block: 1.5rem; }
-.site-footer { padding-block: 1rem; color: var(--muted); font-size: 0.9rem; border-top: 1px solid #d5e3e1; }
+.status { padding: 0.1rem 0.6rem; border-radius: 1rem; font-size: 0.85rem; }
+.status-available { background: #d1fae5; color: #065f46; }
+.status-in-session { background: #dbeafe; color: #1e40af; }
+.status-needs-rest { background: #fef3c7; color: #92400e; }
 
 /* Larger screens (mobile-first enhancement) */
 @media (min-width: 40rem) {
-  .site-header {
-    flex-direction: row;
-    align-items: baseline;
-    gap: 0.5rem 1.5rem;
-  }
+  .site-header { flex-direction: row; align-items: baseline; gap: 0.5rem 1.5rem; }
   .tagline { flex: 1; }
-  main { padding-block: 2rem; }
 }
